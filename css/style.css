@@ -1,0 +1,52 @@
+/* Custom Scrollbar for Webkit */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+}
+ 
+::-webkit-scrollbar-thumb {
+    background: #ccc; 
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #999; 
+}
+
+/* Base Styles */
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px; /* Header height offset */
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Utility for text outlines or specific shadows if needed */
+.text-outline {
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+/* Map placeholder pattern */
+.bg-grid-pattern {
+    background-image: radial-gradient(#ccc 1px, transparent 1px);
+    background-size: 20px 20px;
+}
+
+/* Daruma wobble animation */
+@keyframes wobble {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(-5deg); }
+    50% { transform: rotate(5deg); }
+    75% { transform: rotate(-5deg); }
+    100% { transform: rotate(0deg); }
+}
+
+.hover-wobble:hover {
+    animation: wobble 0.5s ease-in-out;
+}

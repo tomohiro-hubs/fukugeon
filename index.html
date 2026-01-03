@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+<html lang="ja" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>技術力×スピード｜株式会社福GEON | 電気通信工事・内装工事</title>
+    <meta name="description" content="株式会社福GEONは、神奈川・愛知を中心に法人向けの電気通信工事、内装工事、空調工事を一括対応。「技術で解決。スピードで前に進める。」少数精鋭の機動力で、貴社の現場を止めません。">
+    <link rel="icon" href="images/logo.png" type="image/png">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#FFC107', /* Yellow accent based on Daruma/Caution */
+                        primaryHover: '#FFB300',
+                        dark: '#111827',
+                        light: '#F3F4F6',
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans JP"', 'sans-serif'],
+                        en: ['"Inter"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="text-gray-800 bg-white font-sans antialiased">
+
+    <!-- Header -->
+    <header class="fixed w-full top-0 z-50 bg-white/95 backdrop-blur-sm shadow-sm transition-all duration-300" id="header">
+        <div class="container mx-auto px-4 md:px-6 h-20 flex items-center justify-between">
+            <!-- Logo -->
+            <a href="#" class="flex items-center gap-2 group">
+                <img src="images/logo.png" alt="福GEON コーポレートロゴ" class="h-10 md:h-12 w-auto">
+            </a>
+
+            <!-- Desktop Nav -->
+            <nav class="hidden lg:flex items-center gap-6 xl:gap-8 font-medium text-sm">
+                <a href="#services" class="hover:text-primary transition-colors">事業内容</a>
+                <a href="#strength" class="hover:text-primary transition-colors">強み</a>
+                <a href="#area" class="hover:text-primary transition-colors">対応エリア</a>
+                <a href="#works" class="hover:text-primary transition-colors">実績</a>
+                <a href="#flow" class="hover:text-primary transition-colors">ご依頼の流れ</a>
+                <a href="#faq" class="hover:text-primary transition-colors">FAQ</a>
+                <a href="#company" class="hover:text-primary transition-colors">会社概要</a>
+            </nav>
+
+            <!-- CTA -->
+            <div class="hidden lg:flex items-center gap-4">
+                <a href="#contact" class="bg-dark text-white px-6 py-2.5 rounded hover:bg-gray-800 transition-colors font-bold text-sm">
+                    <i class="fa-regular fa-envelope mr-2"></i>お問い合わせ
+                </a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="menu-btn" class="lg:hidden text-2xl p-2 focus:outline-none">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-white border-t absolute w-full left-0 top-20 shadow-lg">
+            <nav class="flex flex-col p-4 gap-4 font-medium">
+                <a href="#services" class="block py-2 border-b border-gray-100">事業内容</a>
+                <a href="#strength" class="block py-2 border-b border-gray-100">強み</a>
+                <a href="#area" class="block py-2 border-b border-gray-100">対応エリア</a>
+                <a href="#works" class="block py-2 border-b border-gray-100">実績</a>
+                <a href="#flow" class="block py-2 border-b border-gray-100">ご依頼の流れ</a>
+                <a href="#faq" class="block py-2 border-b border-gray-100">FAQ</a>
+                <a href="#company" class="block py-2 border-b border-gray-100">会社概要</a>
+                <a href="#contact" class="bg-primary text-dark font-bold text-center py-3 rounded mt-2">
+                    お問い合わせ
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative h-screen min-h-[600px] flex items-center pt-20 overflow-hidden">
+        <!-- Background Image -->
+        <div class="absolute inset-0 bg-gray-900 z-0">
+            <img src="images/hero-bg.jpg" alt="電気工事現場" class="w-full h-full object-cover opacity-60">
+            <div class="absolute inset-0 bg-gradient-to-r from-black/90 via-black/60 to-transparent"></div>
+        </div>
+
+        <div class="container mx-auto px-4 md:px-6 relative z-10 text-white">
+            <div class="max-w-3xl">
+                <p class="font-en text-primary font-bold tracking-wider mb-4 text-sm md:text-base">FAST EXECUTION. SOLID CRAFTSMANSHIP.</p>
+                <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6">
+                    現場を止めるな。<br><span class="text-primary">技術とスピード</span>で完遂する。
+                </h1>
+                <p class="text-lg md:text-xl text-gray-200 mb-8 border-l-4 border-primary pl-4 leading-relaxed">
+                    「急なトラブルで業務が止まっている」「今週末までに工事を終わらせたい」<br>
+                    その課題、福GEON（フクジオン）なら解決できます。<br>
+                    神奈川・愛知を拠点に、通信・電気・内装をワンストップで即応。
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="#contact" class="bg-primary text-dark hover:bg-primaryHover px-8 py-4 rounded font-bold text-center transition-colors shadow-lg shadow-primary/30">
+                        相談する（無料）
+                    </a>
+                    <a href="#contact" class="bg-white/10 backdrop-blur-md border border-white/30 hover:bg-white/20 text-white px-8 py-4 rounded font-bold text-center transition-colors">
+                        協力会社・量販店案件の相談
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll Down Indicator -->
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-white/50 animate-bounce">
+            <i class="fa-solid fa-chevron-down text-2xl"></i>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="text-center mb-16">
+                <span class="font-en text-primary font-bold tracking-widest text-sm block mb-2">SERVICES</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-dark">事業内容</h2>
+                <p class="mt-4 text-gray-600">通信工事・内装工事・空調工事をワンストップで。現場の負担を最小限に。</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="bg-white rounded-lg shadow-sm border border-gray-100 overflow-hidden hover:shadow-xl transition-all duration-300 group">
+                    <div class="h-48 overflow-hidden relative">
+                        <img src="images/service-telecom.jpg" alt="電気通信工事" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3 flex items-center">
+                            <i class="fa-solid fa-network-wired text-primary mr-2"></i>電気通信工事
+                        </h3>
+                        <p class="text-gray-600 mb-4 text-sm leading-relaxed">
+                            LAN配線、弱電設備、ネットワーク機器設置など。オフィスのレイアウト変更や店舗改装に伴う配線整理をスピーディに行います。
+                        </p>
+                        <ul class="text-sm text-gray-500 space-y-2 border-t border-gray-100 pt-4">
+                            <li><i class="fa-solid fa-check text-primary mr-2"></i>LAN/電話工事</li>
+                            <li><i class="fa-solid fa-check text-primary mr-2"></i>防犯カメラ設置</li>
+                            <li><i class="fa-solid fa-check text-primary mr-2"></i>設備更新</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="bg-white rounded-lg shadow-sm border border-gray-100 overflow-hidden hover:shadow-xl transition-all duration-300 group">
+                    <div class="h-48 overflow-hidden relative">
+                        <img src="images/service-interior.jpg" alt="内装工事" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3 flex items-center">
+                            <i class="fa-solid fa-screwdriver-wrench text-primary mr-2"></i>内装工事
+                        </h3>
+                        <p class="text-gray-600 mb-4 text-sm leading-relaxed">
+                            電気工事とセットで発生する軽微な内装復旧、軽量鉄骨下地(LGS)、ボード貼りまで対応。「ついでに頼める」が強みです。
+                        </p>
+                        <ul class="text-sm text-gray-500 space-y-2 border-t border-gray-100 pt-4">
+                            <li><i class="fa-solid fa-check text-primary mr-2"></i>原状回復</li>
+                            <li><i class="fa-solid fa-check text-primary mr-2"></i>ボード・クロス</li>
+                            <li><i class="fa-solid fa-check text-primary mr-2"></i>OAフロア</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="bg-white rounded-lg shadow-sm border border-gray-100 overflow-hidden hover:shadow-xl transition-all duration-300 group">
+                    <div class="h-48 overflow-hidden relative">
+                        <img src="images/service-ac.jpg" alt="空調工事" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3 flex items-center">
+                            <i class="fa-solid fa-wind text-primary mr-2"></i>空調工事
+                        </h3>
+                        <p class="text-gray-600 mb-4 text-sm leading-relaxed">
+                            量販店案件や店舗のパッケージエアコン入替などに対応。電気・通信と合わせた一括発注で、現場管理の手間を削減します。
+                        </p>
+                        <ul class="text-sm text-gray-500 space-y-2 border-t border-gray-100 pt-4">
+                            <li><i class="fa-solid fa-check text-primary mr-2"></i>業務用エアコン</li>
+                            <li><i class="fa-solid fa-check text-primary mr-2"></i>換気設備</li>
+                            <li><i class="fa-solid fa-check text-primary mr-2"></i>一括対応の一部として</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Strength Section -->
+    <section id="strength" class="py-20 bg-dark text-white relative overflow-hidden">
+        <!-- Background Image with Overlay -->
+        <div class="absolute inset-0 z-0">
+            <img src="images/strength-team.jpg" alt="信頼できる現場チーム" class="w-full h-full object-cover opacity-20">
+            <div class="absolute inset-0 bg-gradient-to-r from-dark via-dark/95 to-dark/80"></div>
+        </div>
+
+        <div class="container mx-auto px-4 md:px-6 relative z-10">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-16">
+                <div>
+                    <span class="font-en text-primary font-bold tracking-widest text-sm block mb-2">STRENGTH</span>
+                    <h2 class="text-3xl md:text-4xl font-bold">選ばれる理由</h2>
+                </div>
+                <p class="text-gray-400 mt-4 md:mt-0 text-sm md:text-right max-w-md">
+                    規模の大小にかかわらず、スピーディに対応。<br>
+                    「速い・上手い・一括」で法人の課題を解決します。
+                </p>
+            </div>
+
+            <div class="grid gap-12">
+                <!-- Strength 01 -->
+                <div class="flex flex-col md:flex-row gap-8 items-start border-b border-gray-800 pb-12">
+                    <div class="md:w-1/4">
+                        <span class="text-primary font-en text-5xl font-bold opacity-30">01</span>
+                        <h3 class="text-2xl font-bold mt-2">Speed<br><span class="text-base font-normal text-gray-400">圧倒的なスピード対応</span></h3>
+                    </div>
+                    <div class="md:w-3/4">
+                        <p class="text-lg leading-relaxed mb-4">
+                            少数精鋭だから、<span class="text-primary font-bold">決裁が速い。現場判断が速い。</span>
+                        </p>
+                        <p class="text-gray-400 text-sm">
+                            大手のような重層的な確認フローを省略し、現場責任者が即断即決。「図面がない」「仕様が決まっていない」そんな段階でも、現場で最適解を出します。急な変更もその場で対応可能です。
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Strength 02 -->
+                <div class="flex flex-col md:flex-row gap-8 items-start border-b border-gray-800 pb-12">
+                    <div class="md:w-1/4">
+                        <span class="text-primary font-en text-5xl font-bold opacity-30">02</span>
+                        <h3 class="text-2xl font-bold mt-2">Skill<br><span class="text-base font-normal text-gray-400">現場を止めない技術力</span></h3>
+                    </div>
+                    <div class="md:w-3/4">
+                        <p class="text-lg leading-relaxed mb-4">
+                            夜間・短工期・稼働中の施設。<span class="text-primary font-bold">難易度の高い現場こそ得意です。</span>
+                        </p>
+                        <p class="text-gray-400 text-sm">
+                            ただ繋ぐだけではありません。将来のレイアウト変更を見越した余長処理、ノイズ対策、そして「誰が見ても美しい」ラック整線。見えない場所の美しさにこそ、プロの技術が宿ります。
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Strength 03 -->
+                <div class="flex flex-col md:flex-row gap-8 items-start pb-4">
+                    <div class="md:w-1/4">
+                        <span class="text-primary font-en text-5xl font-bold opacity-30">03</span>
+                        <h3 class="text-2xl font-bold mt-2">One-stop<br><span class="text-base font-normal text-gray-400">通信×電気×内装一括</span></h3>
+                    </div>
+                    <div class="md:w-3/4">
+                        <p class="text-lg leading-relaxed mb-4">
+                            <span class="text-primary font-bold">調整コストを削減。</span>窓口を一本化できます。
+                        </p>
+                        <p class="text-gray-400 text-sm">
+                            「電気はA社、壁紙はB社...」そんな調整の手間は不要です。工程の重複や手待ち時間をなくし、トータル工期を短縮。窓口ひとつで、現場のすべてをコントロールします。
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Promise Box -->
+            <div class="mt-16 bg-gray-800 p-8 rounded border-l-4 border-primary">
+                <h4 class="font-bold text-lg mb-4 text-white"><i class="fa-solid fa-handshake text-primary mr-2"></i>品質の約束</h4>
+                <div class="grid md:grid-cols-3 gap-6 text-sm text-gray-300">
+                    <div>
+                        <strong class="block text-white mb-1">・安全最優先</strong>
+                        <p>事故は最大のロス。保護具着用とKY活動を徹底します。</p>
+                    </div>
+                    <div>
+                        <strong class="block text-white mb-1">・報連相の徹底</strong>
+                        <p>進捗・トラブルは即報告。ブラックボックス化しません。</p>
+                    </div>
+                    <div>
+                        <strong class="block text-white mb-1">・現場美化</strong>
+                        <p>施工後の清掃までが仕事。来た時よりも美しく。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Area Section -->
+    <section id="area" class="py-20 bg-white">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-1/2">
+                    <span class="font-en text-primary font-bold tracking-widest text-sm block mb-2">AREA</span>
+                    <h2 class="text-3xl md:text-4xl font-bold text-dark mb-6">対応エリア</h2>
+                    <p class="text-xl font-bold mb-4">神奈川・愛知中心 / 周辺エリアは要相談</p>
+                    <p class="text-gray-600 mb-6">
+                        本社のある愛知県と、関東支店のある神奈川県を中心に、機動力を活かして対応しています。
+                    </p>
+                    
+                    <div class="bg-gray-50 p-6 rounded-lg">
+                        <ul class="space-y-4">
+                            <li class="flex items-start">
+                                <span class="bg-primary text-dark text-xs font-bold px-2 py-1 rounded mt-1 mr-3">愛知</span>
+                                <div>
+                                    <strong class="block text-dark">本社（愛知県知立市）</strong>
+                                    <span class="text-xs text-gray-500">※名古屋市・県内主要エリア・静岡県西部・岐阜県南部</span>
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="bg-dark text-white text-xs font-bold px-2 py-1 rounded mt-1 mr-3">神奈川</span>
+                                <div>
+                                    <strong class="block text-dark">関東支店（横浜市旭区）</strong>
+                                    <span class="text-xs text-gray-500">※横浜市・川崎市・県内全域・東京都内</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Mobility Image -->
+                <div class="md:w-1/2 relative h-[300px] md:h-[400px] rounded-lg overflow-hidden shadow-lg group">
+                     <img src="images/area-network.jpg" alt="広域ネットワーク対応" class="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-105">
+                     <div class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/80 to-transparent p-6">
+                         <p class="text-white font-bold text-lg"><i class="fa-solid fa-bolt text-primary mr-2"></i>距離を感じさせない対応スピード</p>
+                         <p class="text-gray-300 text-sm mt-1">愛知・神奈川の2拠点でカバーする安心のネットワーク</p>
+                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Voice Section -->
+    <section id="voice" class="py-20 bg-gray-50 border-b border-gray-200 overflow-hidden">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="text-center mb-12">
+                <span class="font-en text-primary font-bold tracking-widest text-sm block mb-2">VOICE</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-dark">お客様の声</h2>
+                <p class="mt-4 text-gray-600">現場のプロフェッショナルから選ばれています。</p>
+            </div>
+
+            <!-- Swiper -->
+            <div class="swiper voice-swiper pb-12">
+                <div class="swiper-wrapper">
+                    <!-- Voice 1 -->
+                    <div class="swiper-slide h-auto">
+                        <div class="bg-white p-8 rounded-lg shadow-sm relative h-full flex flex-col justify-between border border-gray-100">
+                            <div class="absolute -top-4 left-6 text-6xl text-gray-100 font-serif">“</div>
+                            <div class="relative z-10 mb-6">
+                                <p class="text-gray-600 text-sm leading-loose">
+                                    「店舗改装のオープン日が迫る中、追加工事が発生し困り果てていました。福GEONさんに相談したところ、『明日行けます』と即答いただき、その場で材料を手配して夜間工事で完了させてくれました。あのスピード感には本当に助けられました。」
+                                </p>
+                            </div>
+                            <div class="flex items-center gap-4 border-t border-gray-100 pt-4 mt-auto">
+                                <div class="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center text-gray-400 flex-shrink-0">
+                                    <i class="fa-solid fa-store"></i>
+                                </div>
+                                <div>
+                                    <strong class="block text-sm text-dark">飲食チェーン 店舗開発担当様</strong>
+                                    <span class="text-xs text-gray-400">東京都 / 施工内容：LAN・電源増設</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Voice 2 -->
+                    <div class="swiper-slide h-auto">
+                        <div class="bg-white p-8 rounded-lg shadow-sm relative h-full flex flex-col justify-between border border-gray-100">
+                            <div class="absolute -top-4 left-6 text-6xl text-gray-100 font-serif">“</div>
+                            <div class="relative z-10 mb-6">
+                                <p class="text-gray-600 text-sm leading-loose">
+                                    「オフィスのレイアウト変更で、内装と配線を別々の業者に頼むのが面倒で一括で依頼しました。什器の移動からLANの切り替え、壁紙の補修まで、窓口一つでスムーズに進みました。職人さんのマナーも良く、安心して任せられました。」
+                                </p>
+                            </div>
+                            <div class="flex items-center gap-4 border-t border-gray-100 pt-4 mt-auto">
+                                <div class="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center text-gray-400 flex-shrink-0">
+                                    <i class="fa-solid fa-building"></i>
+                                </div>
+                                <div>
+                                    <strong class="block text-sm text-dark">IT企業 総務担当様</strong>
+                                    <span class="text-xs text-gray-400">横浜市 / 施工内容：オフィス改装一式</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Voice 3 -->
+                    <div class="swiper-slide h-auto">
+                        <div class="bg-white p-8 rounded-lg shadow-sm relative h-full flex flex-col justify-between border border-gray-100">
+                            <div class="absolute -top-4 left-6 text-6xl text-gray-100 font-serif">“</div>
+                            <div class="relative z-10 mb-6">
+                                <p class="text-gray-600 text-sm leading-loose">
+                                    「物流倉庫のカメラ設置をお願いしました。高所作業車が必要な現場でしたが、手際よく安全に施工していただきました。配管の仕上がりも非常に綺麗で、施主様からも『プロの仕事だ』と褒められました。今後もパートナーとしてお願いしたいです。」
+                                </p>
+                            </div>
+                            <div class="flex items-center gap-4 border-t border-gray-100 pt-4 mt-auto">
+                                <div class="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center text-gray-400 flex-shrink-0">
+                                    <i class="fa-solid fa-helmet-safety"></i>
+                                </div>
+                                <div>
+                                    <strong class="block text-sm text-dark">建設会社 現場代理人様</strong>
+                                    <span class="text-xs text-gray-400">愛知県 / 施工内容：防犯カメラ設備</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Voice 4 (New) -->
+                    <div class="swiper-slide h-auto">
+                        <div class="bg-white p-8 rounded-lg shadow-sm relative h-full flex flex-col justify-between border border-gray-100">
+                            <div class="absolute -top-4 left-6 text-6xl text-gray-100 font-serif">“</div>
+                            <div class="relative z-10 mb-6">
+                                <p class="text-gray-600 text-sm leading-loose">
+                                    「社員寮のエアコン入替を30台まとめてお願いしました。入居者様の在宅スケジュール調整が大変かと思っていましたが、福GEONさんが工程表を作成し、柔軟に対応してくれたおかげでクレームゼロで完了しました。」
+                                </p>
+                            </div>
+                            <div class="flex items-center gap-4 border-t border-gray-100 pt-4 mt-auto">
+                                <div class="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center text-gray-400 flex-shrink-0">
+                                    <i class="fa-solid fa-house-chimney"></i>
+                                </div>
+                                <div>
+                                    <strong class="block text-sm text-dark">不動産管理会社 担当様</strong>
+                                    <span class="text-xs text-gray-400">神奈川県 / 施工内容：エアコン一括入替</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Voice 5 (New) -->
+                    <div class="swiper-slide h-auto">
+                        <div class="bg-white p-8 rounded-lg shadow-sm relative h-full flex flex-col justify-between border border-gray-100">
+                            <div class="absolute -top-4 left-6 text-6xl text-gray-100 font-serif">“</div>
+                            <div class="relative z-10 mb-6">
+                                <p class="text-gray-600 text-sm leading-loose">
+                                    「商業施設内のテナント工事で、夜間かつ短時間しか作業できない厳しい条件でした。他社には断られましたが、福GEONさんは『人員を増やせば可能です』と引き受けてくれ、見事に工期内で収めてくれました。」
+                                </p>
+                            </div>
+                            <div class="flex items-center gap-4 border-t border-gray-100 pt-4 mt-auto">
+                                <div class="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center text-gray-400 flex-shrink-0">
+                                    <i class="fa-solid fa-bag-shopping"></i>
+                                </div>
+                                <div>
+                                    <strong class="block text-sm text-dark">内装設計施工会社様</strong>
+                                    <span class="text-xs text-gray-400">名古屋市 / 施工内容：店舗電気工事一式</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Voice 6 (New) -->
+                    <div class="swiper-slide h-auto">
+                        <div class="bg-white p-8 rounded-lg shadow-sm relative h-full flex flex-col justify-between border border-gray-100">
+                            <div class="absolute -top-4 left-6 text-6xl text-gray-100 font-serif">“</div>
+                            <div class="relative z-10 mb-6">
+                                <p class="text-gray-600 text-sm leading-loose">
+                                    「オフィスのパーティション変更に伴う電話線の移設をお願いしました。古いビルで配線図もなく不安でしたが、現場調査で配線ルートを特定し、綺麗に隠蔽配線してくれました。技術力の高さを感じました。」
+                                </p>
+                            </div>
+                            <div class="flex items-center gap-4 border-t border-gray-100 pt-4 mt-auto">
+                                <div class="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center text-gray-400 flex-shrink-0">
+                                    <i class="fa-solid fa-phone"></i>
+                                </div>
+                                <div>
+                                    <strong class="block text-sm text-dark">法律事務所 事務長様</strong>
+                                    <span class="text-xs text-gray-400">東京都 / 施工内容：電話・LAN配線</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Works Section -->
+    <section id="works" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="text-center mb-16">
+                <span class="font-en text-primary font-bold tracking-widest text-sm block mb-2">WORKS</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-dark">実績紹介</h2>
+            </div>
+
+            <!-- KPI Bar -->
+            <div class="flex justify-center mb-12">
+                <div class="bg-white shadow-md rounded-full px-8 py-4 flex gap-8 md:gap-16 items-center">
+                    <div class="text-center">
+                        <span class="block text-xs text-gray-500 font-bold">年間工事件数</span>
+                        <span class="text-2xl md:text-3xl font-bold text-dark">300<span class="text-sm font-normal text-gray-500 ml-1">件超</span></span>
+                    </div>
+                    <div class="w-px h-8 bg-gray-200"></div>
+                    <div class="text-center">
+                        <span class="block text-xs text-gray-500 font-bold">リピート率</span>
+                        <span class="text-2xl md:text-3xl font-bold text-dark">90<span class="text-sm font-normal text-gray-500 ml-1">%</span></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Works Card 1 -->
+                <div class="bg-white group hover:shadow-lg transition-all duration-300 rounded overflow-hidden border border-gray-100 flex flex-col h-full">
+                    <div class="h-40 overflow-hidden relative flex-shrink-0">
+                        <img src="images/works-pole.jpg" alt="電柱配線工事風景" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors"></div>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <div class="flex justify-between items-start mb-4">
+                            <span class="bg-gray-100 text-gray-600 text-xs px-2 py-1 rounded">小売店舗</span>
+                            <span class="text-primary font-bold text-xs"><i class="fa-regular fa-clock mr-1"></i>工期2日</span>
+                        </div>
+                        <h3 class="font-bold text-lg mb-2 group-hover:text-primary transition-colors">屋外通信線路 移設工事</h3>
+                        <p class="text-sm text-gray-500 mb-4 flex-grow">
+                            敷地内の電柱移設に伴う、架空ケーブルの張替えと引き込み工事。営業への影響を最小限に抑え、半日で切替を完了。
+                        </p>
+                        <div class="border-t border-gray-100 pt-3 flex gap-2 mt-auto">
+                            <span class="text-xs text-gray-400 border border-gray-200 px-2 py-0.5 rounded">#高所作業</span>
+                            <span class="text-xs text-gray-400 border border-gray-200 px-2 py-0.5 rounded">#通信工事</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Works Card 2 -->
+                <div class="bg-white group hover:shadow-lg transition-all duration-300 rounded overflow-hidden border border-gray-100 flex flex-col h-full">
+                    <div class="h-40 overflow-hidden relative flex-shrink-0">
+                        <img src="images/works-wallpaper-real.jpg" alt="オフィス壁紙張り替え工事" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors"></div>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <div class="flex justify-between items-start mb-4">
+                            <span class="bg-gray-100 text-gray-600 text-xs px-2 py-1 rounded">オフィス</span>
+                            <span class="text-primary font-bold text-xs"><i class="fa-regular fa-clock mr-1"></i>工期2日（土日）</span>
+                        </div>
+                        <h3 class="font-bold text-lg mb-2 group-hover:text-primary transition-colors">什器移動・内装復旧・LAN再構築</h3>
+                        <p class="text-sm text-gray-500 mb-4 flex-grow">
+                            50坪のオフィス改装。金曜夜から什器を移動し、土日で壁紙の張替えと床下LAN配線の引き直しを完遂。月曜朝の始業に間に合わせました。
+                        </p>
+                        <div class="border-t border-gray-100 pt-3 flex gap-2 mt-auto">
+                            <span class="text-xs text-gray-400 border border-gray-200 px-2 py-0.5 rounded">#内装一括</span>
+                            <span class="text-xs text-gray-400 border border-gray-200 px-2 py-0.5 rounded">#週末対応</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Works Card 3 -->
+                <div class="bg-white group hover:shadow-lg transition-all duration-300 rounded overflow-hidden border border-gray-100 flex flex-col h-full">
+                    <div class="h-40 overflow-hidden relative flex-shrink-0">
+                        <img src="images/works-room-ac.jpg" alt="ルームエアコン設置工事" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors"></div>
+                    </div>
+                    <div class="p-6 flex flex-col flex-grow">
+                        <div class="flex justify-between items-start mb-4">
+                            <span class="bg-gray-100 text-gray-600 text-xs px-2 py-1 rounded">集合住宅・寮・個人宅</span>
+                            <span class="text-primary font-bold text-xs"><i class="fa-regular fa-clock mr-1"></i>工期1日</span>
+                        </div>
+                        <h3 class="font-bold text-lg mb-2 group-hover:text-primary transition-colors">エアコン設置・入替工事</h3>
+                        <p class="text-sm text-gray-500 mb-4 flex-grow">
+                            管理物件や社員寮などのルームエアコン設置に対応。複数台の一括施工もスピーディに行います。
+                        </p>
+                        <div class="border-t border-gray-100 pt-3 flex gap-2 mt-auto">
+                            <span class="text-xs text-gray-400 border border-gray-200 px-2 py-0.5 rounded">#空調工事</span>
+                            <span class="text-xs text-gray-400 border border-gray-200 px-2 py-0.5 rounded">#一括対応</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Flow Section -->
+    <section id="flow" class="py-20 bg-white">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="text-center mb-16">
+                <span class="font-en text-primary font-bold tracking-widest text-sm block mb-2">FLOW</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-dark">ご依頼の流れ</h2>
+                <p class="mt-4 text-gray-600">お急ぎの案件も、まずはご相談ください。</p>
+            </div>
+
+            <div class="max-w-4xl mx-auto">
+                <!-- Flow Steps -->
+                <div class="relative">
+                    <!-- Connecting Line (Desktop) -->
+                    <div class="hidden md:block absolute top-1/2 left-0 w-full h-1 bg-gray-100 -z-10 transform -translate-y-1/2"></div>
+                    
+                    <div class="grid md:grid-cols-5 gap-8">
+                        <!-- Step 1 -->
+                        <div class="bg-white text-center group">
+                            <div class="w-16 h-16 mx-auto bg-dark text-white rounded-full flex items-center justify-center text-xl font-bold mb-4 border-4 border-white shadow-lg group-hover:bg-primary group-hover:text-dark transition-colors">
+                                <i class="fa-regular fa-comments"></i>
+                            </div>
+                            <h3 class="font-bold mb-2">01. 相談</h3>
+                            <p class="text-xs text-gray-500">お電話またはフォームより。急ぎの場合はお電話で。</p>
+                        </div>
+
+                        <!-- Step 2 -->
+                        <div class="bg-white text-center group">
+                            <div class="w-16 h-16 mx-auto bg-white text-dark rounded-full flex items-center justify-center text-xl font-bold mb-4 border-4 border-gray-100 shadow-md group-hover:border-primary transition-colors">
+                                <i class="fa-solid fa-map-location-dot"></i>
+                            </div>
+                            <h3 class="font-bold mb-2">02. 現地調査</h3>
+                            <p class="text-xs text-gray-500">現場を確認し、最適な施工方法を検討します。</p>
+                        </div>
+
+                        <!-- Step 3 -->
+                        <div class="bg-white text-center group">
+                            <div class="w-16 h-16 mx-auto bg-white text-dark rounded-full flex items-center justify-center text-xl font-bold mb-4 border-4 border-gray-100 shadow-md group-hover:border-primary transition-colors">
+                                <i class="fa-solid fa-file-invoice-dollar"></i>
+                            </div>
+                            <h3 class="font-bold mb-2">03. お見積</h3>
+                            <p class="text-xs text-gray-500">詳細な見積書をスピーディに提出します。</p>
+                        </div>
+
+                        <!-- Step 4 -->
+                        <div class="bg-white text-center group">
+                            <div class="w-16 h-16 mx-auto bg-white text-dark rounded-full flex items-center justify-center text-xl font-bold mb-4 border-4 border-gray-100 shadow-md group-hover:border-primary transition-colors">
+                                <i class="fa-solid fa-screwdriver-wrench"></i>
+                            </div>
+                            <h3 class="font-bold mb-2">04. 施工</h3>
+                            <p class="text-xs text-gray-500">安全・品質・工程を遵守し、確実に施工します。</p>
+                        </div>
+
+                        <!-- Step 5 -->
+                        <div class="bg-white text-center group">
+                            <div class="w-16 h-16 mx-auto bg-white text-dark rounded-full flex items-center justify-center text-xl font-bold mb-4 border-4 border-gray-100 shadow-md group-hover:border-primary transition-colors">
+                                <i class="fa-solid fa-check-double"></i>
+                            </div>
+                            <h3 class="font-bold mb-2">05. 完了</h3>
+                            <p class="text-xs text-gray-500">検査・報告書提出後に、お引き渡しとなります。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4 md:px-6 max-w-3xl">
+            <div class="text-center mb-12">
+                <span class="font-en text-primary font-bold tracking-widest text-sm block mb-2">FAQ</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-dark">よくある質問</h2>
+            </div>
+
+            <div class="space-y-4">
+                <!-- FAQ Item 1 -->
+                <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+                    <button class="w-full px-6 py-4 text-left font-bold flex justify-between items-center focus:outline-none bg-white hover:bg-gray-50 transition-colors" onclick="toggleFaq(this)">
+                        <span>Q. 土日や夜間の工事は可能ですか？</span>
+                        <i class="fa-solid fa-plus text-primary transition-transform"></i>
+                    </button>
+                    <div class="hidden px-6 pb-4 text-gray-600 text-sm border-t border-gray-100 pt-3">
+                        A. はい、可能です。店舗やオフィスの営業時間外での施工実績が多数ございます。お気軽にご相談ください。
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+                    <button class="w-full px-6 py-4 text-left font-bold flex justify-between items-center focus:outline-none bg-white hover:bg-gray-50 transition-colors" onclick="toggleFaq(this)">
+                        <span>Q. 急ぎで対応してもらえますか？</span>
+                        <i class="fa-solid fa-plus text-primary transition-transform"></i>
+                    </button>
+                    <div class="hidden px-6 pb-4 text-gray-600 text-sm border-t border-gray-100 pt-3">
+                        A. 可能な限り最短で対応いたします。エリアや内容によっては即日・翌日の現調も可能ですので、まずは電話でご連絡ください。
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+                    <button class="w-full px-6 py-4 text-left font-bold flex justify-between items-center focus:outline-none bg-white hover:bg-gray-50 transition-colors" onclick="toggleFaq(this)">
+                        <span>Q. 安全書類（グリーンファイル）の作成は可能ですか？</span>
+                        <i class="fa-solid fa-plus text-primary transition-transform"></i>
+                    </button>
+                    <div class="hidden px-6 pb-4 text-gray-600 text-sm border-t border-gray-100 pt-3">
+                        A. はい、対応可能です。大手ゼネコン様やサブコン様の一次請け実績もございますので、所定の書式にて提出いたします。
+                    </div>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+                    <button class="w-full px-6 py-4 text-left font-bold flex justify-between items-center focus:outline-none bg-white hover:bg-gray-50 transition-colors" onclick="toggleFaq(this)">
+                        <span>Q. 小さな修繕でも頼めますか？</span>
+                        <i class="fa-solid fa-plus text-primary transition-transform"></i>
+                    </button>
+                    <div class="hidden px-6 pb-4 text-gray-600 text-sm border-t border-gray-100 pt-3">
+                        A. 規模に関わらず承ります。「コンセント1つの増設」「LANケーブル1本の配線」から丁寧に対応いたします。
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Company Section -->
+    <section id="company" class="py-20 bg-white border-t border-gray-100">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="text-center mb-12">
+                <span class="font-en text-primary font-bold tracking-widest text-sm block mb-2">COMPANY</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-dark">会社概要</h2>
+            </div>
+
+            <div class="max-w-4xl mx-auto bg-gray-50 rounded-lg p-8 md:p-12">
+                <dl class="grid md:grid-cols-3 gap-y-8 gap-x-4">
+                    <div class="contents">
+                        <dt class="font-bold text-dark border-b border-gray-200 pb-2 md:border-none md:pb-0">会社名</dt>
+                        <dd class="md:col-span-2 text-gray-600 mb-4 md:mb-0">株式会社福GEON</dd>
+                    </div>
+
+                    <div class="contents">
+                        <dt class="font-bold text-dark border-b border-gray-200 pb-2 md:border-none md:pb-0">所在地</dt>
+                        <dd class="md:col-span-2 text-gray-600 mb-4 md:mb-0 space-y-4">
+                            <div>
+                                <span class="bg-primary text-dark text-xs font-bold px-2 py-1 rounded mr-2">本社</span>
+                                <span class="block mt-1">〒472-0004<br>愛知県知立市南陽2-127</span>
+                            </div>
+                            <div>
+                                <span class="bg-dark text-white text-xs font-bold px-2 py-1 rounded mr-2">関東支店</span>
+                                <span class="block mt-1">〒241-0012<br>神奈川県横浜市旭区西川島町54-33</span>
+                            </div>
+                        </dd>
+                    </div>
+
+                    <div class="contents">
+                        <dt class="font-bold text-dark border-b border-gray-200 pb-2 md:border-none md:pb-0">代表者</dt>
+                        <dd class="md:col-span-2 text-gray-600 mb-4 md:mb-0">代表取締役 谷本 大樹</dd>
+                    </div>
+
+                    <div class="contents">
+                        <dt class="font-bold text-dark border-b border-gray-200 pb-2 md:border-none md:pb-0">連絡先</dt>
+                        <dd class="md:col-span-2 text-gray-600 mb-4 md:mb-0">
+                            TEL: 0566-91-7020<br>
+                            FAX: 0566-91-7021
+                        </dd>
+                    </div>
+
+                    <div class="contents">
+                        <dt class="font-bold text-dark border-b border-gray-200 pb-2 md:border-none md:pb-0">事業内容</dt>
+                        <dd class="md:col-span-2 text-gray-600 mb-4 md:mb-0">
+                            <ul class="list-disc list-inside space-y-1">
+                                <li>電気通信工事一式</li>
+                                <li>内装仕上工事</li>
+                                <li>空調設備工事</li>
+                            </ul>
+                        </dd>
+                    </div>
+
+
+                </dl>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-dark text-white">
+        <div class="container mx-auto px-4 md:px-6">
+            <div class="grid md:grid-cols-2 gap-12">
+                <!-- Contact Info -->
+                <div>
+                    <span class="font-en text-primary font-bold tracking-widest text-sm block mb-2">CONTACT</span>
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6">お問い合わせ</h2>
+                    <p class="text-gray-400 mb-8">
+                        お急ぎの方はお電話にてご連絡ください。<br>
+                        メールでのお見積り・ご相談はフォームをご利用ください。
+                    </p>
+
+                    <div class="bg-gray-800 p-6 rounded-lg mb-8 border border-gray-700">
+                        <p class="text-sm text-gray-400 mb-2">お電話・FAXでのお問い合わせ</p>
+                        <a href="tel:0566-91-7020" class="text-3xl font-bold font-en hover:text-primary transition-colors block mb-1">
+                            <i class="fa-solid fa-phone mr-2 text-primary text-xl"></i>0566-91-7020
+                        </a>
+                        <div class="text-xl font-bold font-en text-gray-300 block mb-2 pl-1">
+                            <i class="fa-solid fa-fax mr-2 text-gray-500 text-lg"></i>0566-91-7021
+                        </div>
+                        <p class="text-xs text-gray-500 mb-2">受付時間：平日 9:00〜18:00</p>
+                        <p class="text-xs text-red-400 border-t border-gray-700 pt-2 mt-2">
+                            ※営業・勧誘目的のお電話は固くお断りいたします。
+                        </p>
+                    </div>
+
+                    <div class="space-y-4 text-sm text-gray-400">
+                        <div class="flex items-start">
+                            <i class="fa-solid fa-location-dot mt-1 mr-3 w-4"></i>
+                            <div>
+                                <strong class="block text-white">本社</strong>
+                                〒472-0004<br>愛知県知立市南陽2-127
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fa-solid fa-location-dot mt-1 mr-3 w-4"></i>
+                            <div>
+                                <strong class="block text-white">関東支店</strong>
+                                〒241-0012<br>神奈川県横浜市旭区西川島町54-33
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="bg-white text-dark rounded-lg p-6 md:p-8">
+                    <form onsubmit="event.preventDefault(); alert('デモサイトのため送信されません。');">
+                        <div class="mb-4">
+                            <label class="block text-sm font-bold mb-2">お問い合わせ種別 <span class="text-red-500">*</span></label>
+                            <select class="w-full bg-gray-50 border border-gray-300 rounded px-3 py-2 focus:outline-none focus:border-primary">
+                                <option>法人工事のご相談</option>
+                                <option>量販店・店舗案件のご相談</option>
+                                <option>協力会社提携について</option>
+                                <option>その他</option>
+                            </select>
+                        </div>
+                        <div class="grid grid-cols-2 gap-4 mb-4">
+                            <div>
+                                <label class="block text-sm font-bold mb-2">会社名 <span class="text-red-500">*</span></label>
+                                <input type="text" class="w-full bg-gray-50 border border-gray-300 rounded px-3 py-2 focus:outline-none focus:border-primary" placeholder="株式会社〇〇">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-bold mb-2">担当者名 <span class="text-red-500">*</span></label>
+                                <input type="text" class="w-full bg-gray-50 border border-gray-300 rounded px-3 py-2 focus:outline-none focus:border-primary" placeholder="山田 太郎">
+                            </div>
+                        </div>
+                        <div class="mb-4">
+                            <label class="block text-sm font-bold mb-2">メールアドレス <span class="text-red-500">*</span></label>
+                            <input type="email" class="w-full bg-gray-50 border border-gray-300 rounded px-3 py-2 focus:outline-none focus:border-primary" placeholder="info@example.com">
+                        </div>
+                        <div class="grid grid-cols-2 gap-4 mb-4">
+                            <div>
+                                <label class="block text-sm font-bold mb-2">希望エリア</label>
+                                <select class="w-full bg-gray-50 border border-gray-300 rounded px-3 py-2 focus:outline-none focus:border-primary">
+                                    <option>神奈川県</option>
+                                    <option>愛知県</option>
+                                    <option>その他</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-bold mb-2">希望工期</label>
+                                <input type="text" class="w-full bg-gray-50 border border-gray-300 rounded px-3 py-2 focus:outline-none focus:border-primary" placeholder="例：来月中旬">
+                            </div>
+                        </div>
+                        <div class="mb-6">
+                            <label class="block text-sm font-bold mb-2">ご相談内容 <span class="text-red-500">*</span></label>
+                            <textarea class="w-full bg-gray-50 border border-gray-300 rounded px-3 py-2 h-32 focus:outline-none focus:border-primary" placeholder="工事の内容や規模感などをご記入ください"></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-primary hover:bg-primaryHover text-dark font-bold py-3 rounded transition-colors shadow-lg">
+                            送信する
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-500 py-8 text-sm">
+        <div class="container mx-auto px-4 md:px-6 text-center">
+            <div class="flex flex-col md:flex-row justify-center items-center gap-4 mb-4">
+                <a href="privacy.html" class="hover:text-white transition-colors">プライバシーポリシー</a>
+            </div>
+            <p>&copy; 2024 株式会社福GEON All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+</body>
+</html>
