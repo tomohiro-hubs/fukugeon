@@ -488,21 +488,6 @@
                 <h2 class="text-3xl md:text-4xl font-bold text-dark">実績紹介</h2>
             </div>
 
-            <!-- KPI Bar -->
-            <div class="flex justify-center mb-12">
-                <div class="bg-white shadow-md rounded-full px-8 py-4 flex gap-8 md:gap-16 items-center">
-                    <div class="text-center">
-                        <span class="block text-xs text-gray-500 font-bold">年間工事件数</span>
-                        <span class="text-2xl md:text-3xl font-bold text-dark">300<span class="text-sm font-normal text-gray-500 ml-1">件超</span></span>
-                    </div>
-                    <div class="w-px h-8 bg-gray-200"></div>
-                    <div class="text-center">
-                        <span class="block text-xs text-gray-500 font-bold">リピート率</span>
-                        <span class="text-2xl md:text-3xl font-bold text-dark">90<span class="text-sm font-normal text-gray-500 ml-1">%</span></span>
-                    </div>
-                </div>
-            </div>
-
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <!-- Works Card 1 -->
                 <div class="bg-white group hover:shadow-lg transition-all duration-300 rounded overflow-hidden border border-gray-100 flex flex-col h-full">
@@ -801,7 +786,7 @@
 
                 <!-- Contact Form -->
                 <div class="bg-white text-dark rounded-lg p-6 md:p-8">
-                    <form onsubmit="event.preventDefault(); alert('デモサイトのため送信されません。');">
+                    <form id="contact-form">
                         <div class="mb-4">
                             <label class="block text-sm font-bold mb-2">お問い合わせ種別 <span class="text-red-500">*</span></label>
                             <select class="w-full bg-gray-50 border border-gray-300 rounded px-3 py-2 focus:outline-none focus:border-primary">
@@ -844,7 +829,7 @@
                             <textarea class="w-full bg-gray-50 border border-gray-300 rounded px-3 py-2 h-32 focus:outline-none focus:border-primary" placeholder="工事の内容や規模感などをご記入ください"></textarea>
                         </div>
                         <button type="submit" class="w-full bg-primary hover:bg-primaryHover text-dark font-bold py-3 rounded transition-colors shadow-lg">
-                            送信する
+                            お問い合わせを送信する
                         </button>
                     </form>
                 </div>
@@ -852,13 +837,28 @@
         </div>
     </section>
 
+    <div id="contact-complete-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-4" role="dialog" aria-modal="true" aria-labelledby="contact-complete-title">
+        <div id="contact-complete-backdrop" class="absolute inset-0 bg-black/50"></div>
+        <div class="relative w-full max-w-md rounded-lg bg-white p-6 md:p-8 text-dark shadow-2xl border border-gray-200">
+            <button id="contact-complete-close" type="button" class="absolute right-4 top-4 text-gray-500 hover:text-dark transition-colors" aria-label="閉じる">
+                <i class="fa-solid fa-xmark text-xl"></i>
+            </button>
+            <p class="font-en text-primary font-bold tracking-widest text-sm mb-2">CONTACT</p>
+            <h3 id="contact-complete-title" class="text-2xl font-bold mb-3">送信完了しました</h3>
+            <p class="text-gray-600 mb-6">お問い合わせありがとうございます。Googleフォームを新しいタブで開きました。</p>
+            <button id="contact-complete-ok" type="button" class="w-full bg-primary hover:bg-primaryHover text-dark font-bold py-3 rounded transition-colors shadow-lg">
+                OK
+            </button>
+        </div>
+    </div>
+
     <!-- Footer -->
     <footer class="bg-gray-900 text-gray-500 py-8 text-sm">
         <div class="container mx-auto px-4 md:px-6 text-center">
             <div class="flex flex-col md:flex-row justify-center items-center gap-4 mb-4">
                 <a href="privacy.html" class="hover:text-white transition-colors">プライバシーポリシー</a>
             </div>
-            <p>&copy; 2024 株式会社福GEON All Rights Reserved.</p>
+            <p>&copy; 2026株式会社福GEON All Rights Reserved.</p>
         </div>
     </footer>
 

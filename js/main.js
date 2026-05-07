@@ -106,4 +106,51 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
+    // Contact form transition and completion modal
+    const contactForm = document.getElementById('contact-form');
+    const contactCompleteModal = document.getElementById('contact-complete-modal');
+    const contactCompleteBackdrop = document.getElementById('contact-complete-backdrop');
+    const contactCompleteClose = document.getElementById('contact-complete-close');
+    const contactCompleteOk = document.getElementById('contact-complete-ok');
+    const googleFormUrl = 'https://docs.google.com/forms/d/e/1FAIpQLSfNQi65DT7rO6hnp35EG0gjNyPHG7rvhdEiIMDcePhYVOidOw/viewform?usp=dialog';
+
+    if (contactForm && contactCompleteModal) {
+        const openCompleteModal = function() {
+            contactCompleteModal.classList.remove('hidden');
+            contactCompleteModal.classList.add('flex');
+            document.body.classList.add('overflow-hidden');
+        };
+
+        const closeCompleteModal = function() {
+            contactCompleteModal.classList.add('hidden');
+            contactCompleteModal.classList.remove('flex');
+            document.body.classList.remove('overflow-hidden');
+        };
+
+        contactForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+            const openedWindow = window.open(googleFormUrl, '_blank', 'noopener,noreferrer');
+            if (!openedWindow) {
+                window.location.href = googleFormUrl;
+            }
+            openCompleteModal();
+        });
+
+        if (contactCompleteClose) {
+            contactCompleteClose.addEventListener('click', closeCompleteModal);
+        }
+        if (contactCompleteOk) {
+            contactCompleteOk.addEventListener('click', closeCompleteModal);
+        }
+        if (contactCompleteBackdrop) {
+            contactCompleteBackdrop.addEventListener('click', closeCompleteModal);
+        }
+
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape' && !contactCompleteModal.classList.contains('hidden')) {
+                closeCompleteModal();
+            }
+        });
+    }
+
 });
