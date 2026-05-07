@@ -112,7 +112,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const contactCompleteBackdrop = document.getElementById('contact-complete-backdrop');
     const contactCompleteClose = document.getElementById('contact-complete-close');
     const contactCompleteOk = document.getElementById('contact-complete-ok');
-    const googleFormUrl = 'https://docs.google.com/forms/d/e/1FAIpQLSfNQi65DT7rO6hnp35EG0gjNyPHG7rvhdEiIMDcePhYVOidOw/viewform?usp=dialog';
+    const googleFormResponseUrl = 'https://docs.google.com/forms/d/e/1FAIpQLSfNQi65DT7rO6hnp35EG0gjNyPHG7rvhdEiIMDcePhYVOidOw/formResponse';
 
     if (contactForm && contactCompleteModal) {
         const openCompleteModal = function() {
@@ -129,11 +129,22 @@ document.addEventListener('DOMContentLoaded', function() {
 
         contactForm.addEventListener('submit', function(event) {
             event.preventDefault();
-            const openedWindow = window.open(googleFormUrl, '_blank', 'noopener,noreferrer');
-            if (!openedWindow) {
-                window.location.href = googleFormUrl;
+            if (!contactForm.checkValidity()) {
+                contactForm.reportValidity();
+                return;
             }
+
+            const formData = new FormData(contactForm);
+            fetch(googleFormResponseUrl, {
+                method: 'POST',
+                mode: 'no-cors',
+                body: formData
+            }).catch(function() {
+                // no-cors fetch does not expose detailed failure info
+            });
+
             openCompleteModal();
+            contactForm.reset();
         });
 
         if (contactCompleteClose) {

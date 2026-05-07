@@ -789,7 +789,7 @@
                     <form id="contact-form">
                         <div class="mb-4">
                             <label class="block text-sm font-bold mb-2">お問い合わせ種別 <span class="text-red-500">*</span></label>
-                            <select class="w-full bg-gray-50 border border-gray-300 rounded px-3 py-2 focus:outline-none focus:border-primary">
+                            <select name="entry.1460037578" required class="w-full bg-gray-50 border border-gray-300 rounded px-3 py-2 focus:outline-none focus:border-primary">
                                 <option>法人工事のご相談</option>
                                 <option>量販店・店舗案件のご相談</option>
                                 <option>協力会社提携について</option>
@@ -799,21 +799,21 @@
                         <div class="grid grid-cols-2 gap-4 mb-4">
                             <div>
                                 <label class="block text-sm font-bold mb-2">会社名 <span class="text-red-500">*</span></label>
-                                <input type="text" class="w-full bg-gray-50 border border-gray-300 rounded px-3 py-2 focus:outline-none focus:border-primary" placeholder="株式会社〇〇">
+                                <input name="entry.1318290962" type="text" required class="w-full bg-gray-50 border border-gray-300 rounded px-3 py-2 focus:outline-none focus:border-primary" placeholder="株式会社〇〇">
                             </div>
                             <div>
                                 <label class="block text-sm font-bold mb-2">担当者名 <span class="text-red-500">*</span></label>
-                                <input type="text" class="w-full bg-gray-50 border border-gray-300 rounded px-3 py-2 focus:outline-none focus:border-primary" placeholder="山田 太郎">
+                                <input name="entry.80437487" type="text" required class="w-full bg-gray-50 border border-gray-300 rounded px-3 py-2 focus:outline-none focus:border-primary" placeholder="山田 太郎">
                             </div>
                         </div>
                         <div class="mb-4">
                             <label class="block text-sm font-bold mb-2">メールアドレス <span class="text-red-500">*</span></label>
-                            <input type="email" class="w-full bg-gray-50 border border-gray-300 rounded px-3 py-2 focus:outline-none focus:border-primary" placeholder="info@example.com">
+                            <input name="entry.2008215948" type="email" required class="w-full bg-gray-50 border border-gray-300 rounded px-3 py-2 focus:outline-none focus:border-primary" placeholder="info@example.com">
                         </div>
                         <div class="grid grid-cols-2 gap-4 mb-4">
                             <div>
                                 <label class="block text-sm font-bold mb-2">希望エリア</label>
-                                <select class="w-full bg-gray-50 border border-gray-300 rounded px-3 py-2 focus:outline-none focus:border-primary">
+                                <select name="entry.624343605" class="w-full bg-gray-50 border border-gray-300 rounded px-3 py-2 focus:outline-none focus:border-primary">
                                     <option>神奈川県</option>
                                     <option>愛知県</option>
                                     <option>その他</option>
@@ -821,12 +821,12 @@
                             </div>
                             <div>
                                 <label class="block text-sm font-bold mb-2">希望工期</label>
-                                <input type="text" class="w-full bg-gray-50 border border-gray-300 rounded px-3 py-2 focus:outline-none focus:border-primary" placeholder="例：来月中旬">
+                                <input name="entry.1979281803" type="text" class="w-full bg-gray-50 border border-gray-300 rounded px-3 py-2 focus:outline-none focus:border-primary" placeholder="例：来月中旬">
                             </div>
                         </div>
                         <div class="mb-6">
                             <label class="block text-sm font-bold mb-2">ご相談内容 <span class="text-red-500">*</span></label>
-                            <textarea class="w-full bg-gray-50 border border-gray-300 rounded px-3 py-2 h-32 focus:outline-none focus:border-primary" placeholder="工事の内容や規模感などをご記入ください"></textarea>
+                            <textarea name="entry.1069545092" required class="w-full bg-gray-50 border border-gray-300 rounded px-3 py-2 h-32 focus:outline-none focus:border-primary" placeholder="工事の内容や規模感などをご記入ください"></textarea>
                         </div>
                         <button type="submit" class="w-full bg-primary hover:bg-primaryHover text-dark font-bold py-3 rounded transition-colors shadow-lg">
                             お問い合わせを送信する
@@ -845,7 +845,7 @@
             </button>
             <p class="font-en text-primary font-bold tracking-widest text-sm mb-2">CONTACT</p>
             <h3 id="contact-complete-title" class="text-2xl font-bold mb-3">送信完了しました</h3>
-            <p class="text-gray-600 mb-6">お問い合わせありがとうございます。Googleフォームを新しいタブで開きました。</p>
+            <p class="text-gray-600 mb-6">お問い合わせありがとうございます。送信が完了しました。</p>
             <button id="contact-complete-ok" type="button" class="w-full bg-primary hover:bg-primaryHover text-dark font-bold py-3 rounded transition-colors shadow-lg">
                 OK
             </button>
